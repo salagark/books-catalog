@@ -46,11 +46,12 @@
 		"roots": [
 			"<rootDir>/src"
 		],
+		"testMatch": [
+			"**/__tests__/**/*.+(ts)",
+			"**/?(*.)+(spec|test).+(ts)"
+		],
 		"transform": {
-			"^.+\\.ts?$": "ts-jest"
-		},
-		"testPathIgnorePatterns": [
-			"src/__tests__/book-repository.test.js"
-		]
+			"^.+\\.(ts|tsx)$": "ts-jest"
+		}
 	}
 }
