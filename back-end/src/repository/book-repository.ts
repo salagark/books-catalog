@@ -2,7 +2,7 @@ import { reactBooks } from "../data/google-books-api-raw-response";
 import { Book } from "../types/books";
 
 export class BookRepository {
-	private static _instance: BookRepository;
+	private static _instance: BookRepository | undefined;
 	private static data: Book[];
 	private constructor() {}
 
@@ -21,6 +21,10 @@ export class BookRepository {
 		}
 	}
 
+	static reset() {
+		BookRepository._instance = undefined;
+	}
+
 	getAll(): Book[] {
 		return BookRepository.data;
 	}
@@ -35,8 +39,7 @@ export class BookRepository {
 
 	delete(id: string) {
 		const index = BookRepository.data.findIndex((book) => book.id === id);
-
-		if (!index) {
+		if (index === -1) {
 			throw new Error(`Book with id ${id} not found`);
 		}
 		BookRepository.data.splice(index, 1);
