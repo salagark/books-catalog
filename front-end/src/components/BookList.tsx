@@ -11,14 +11,14 @@ export const BookList = () => {
 	return (
 		<div className="container">
 			<Divider horizontal>
-				<Header as="h4">
+				<Header as="h1">
 					<Icon name="book" />
 					Books
 				</Header>
 			</Divider>
 			<Card.Group>
-				{books.map((book) => {
-					return <BookCard {...book} />;
+				{books.map((book, index) => {
+					return <BookCard {...book} key={index} />;
 				})}
 			</Card.Group>
 			<BookModal />
