@@ -17,7 +17,7 @@
 		"Node",
 		"Typescript",
 		"javascript",
-		"emailGuesser"
+		"books"
 	],
 	"license": "MIT",
 	"dependencies": {

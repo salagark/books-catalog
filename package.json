@@ -3,8 +3,8 @@
 	"version": "1.0.0",
 	"description": "Full Stack App that guesses email address for a user with domain",
 	"scripts": {
-		"setup": "concurrently \"cd front-end && npm install\" \"cd backend && npm install\"",
-		"start": "concurrently \"cd backend && npm run start\" \"cd front-end && npm run start\""
+		"setup": "concurrently \"cd front-end && npm install\" \"cd back-end && npm install\"",
+		"start": "concurrently \"cd back-end && npm run start\" \"cd front-end && npm run start\""
 	},
 	"repository": {
 		"type": "git",
