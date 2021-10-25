@@ -1,0 +1,22 @@
+{
+	"name": "books-catalog",
+	"version": "1.0.0",
+	"description": "Full Stack App that guesses email address for a user with domain",
+	"scripts": {
+		"setup": "concurrently \"cd front-end && npm install\" \"cd backend && npm install\"",
+		"start": "concurrently \"cd backend && npm run start\" \"cd front-end && npm run start\""
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/salagark/email-guesser.git"
+	},
+	"author": "Srinath Alagar Krishnan",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/salagark/email-guesser/issues"
+	},
+	"homepage": "https://github.com/salagark/email-guesser#readme",
+	"dependencies": {
+		"concurrently": "6.3.0"
+	}
+}
